@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background-color: #faf8f3;
+  color: #1e293b;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* RTL Typography Refinements */
+[dir="rtl"] body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .font-serif {
+  font-family: 'Amiri', 'Cairo', serif;
+}
+
+[dir="ltr"] body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+[dir="ltr"] .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09111e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c59325;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d5aa42;
+}
+
+/* Luxury Card & Border Effects */
+.luxury-border {
+  position: relative;
+}
+
+.luxury-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(197, 147, 37, 0.4), rgba(255, 255, 255, 0.05), rgba(197, 147, 37, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #dfb74a 0%, #c59325 50%, #f6eed2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-nav {
+  background: rgba(10, 19, 34, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card-dark {
+  background: rgba(17, 31, 56, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 147, 37, 0.2);
+}
+
+/* Background Grids & Patterns */
+.hero-bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(197, 147, 37, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(197, 147, 37, 0.04) 1px, transparent 1px);
+}
+
+.radial-luxury-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(197, 147, 37, 0.12) 0%, rgba(10, 19, 34, 0) 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
