@@ -9,7 +9,6 @@ import {
   ArrowUpRight,
   ArrowUpLeft,
   Sparkles,
-  Building2
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 

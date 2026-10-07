@@ -151,12 +151,6 @@ export const HeroSection: React.FC = () => {
                   alt={isRTL ? "مستشار إدارة الأعمال والموارد البشرية - أسماء خالد" : "Business Management & HR Consultant - Asmaa Khaled"}
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    if (target.src.endsWith('/portrait.PNG')) {
-                      target.src = '/dist/portrait.PNG';
-                    }
-                  }}
                 />
 
                 {/* Subtle Gradient Overlay */}
